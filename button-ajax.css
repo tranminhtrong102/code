@@ -1,0 +1,41 @@
+admin-change-status i,
+.submit-withdrawal i,
+.btn-registration-lesson i{
+  visibility: hidden;
+  margin-left: -10px;
+  opacity: 0;
+  -webkit-animation: rotation 2s infinite linear;
+  -moz--animation: rotation 2s infinite linear;
+  -o-animation: rotation 2s infinite linear;
+  -ms-animation: rotation 2s infinite linear;
+  animation: rotation 2s infinite linear;
+  transition: all ease-in-out 0.2s;
+  -moz-transition: all ease-in-out 0.2s;
+  -o-transition: all ease-in-out 0.2s;
+  -webkit-transition: all ease-in-out 0.2s;
+  -ms-transition: all ease-in-out 0.2s;
+
+}
+@-webkit-keyframes rotation {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(359deg);
+  }
+}
+.admin-change-status.open i,
+.submit-withdrawal.open i,
+.btn-registration-lesson.open i{
+  visibility: visible;
+  opacity: 1;
+  margin-left: 10px;
+  position: relative;
+  transition: all ease-in-out 0.2s;
+  -moz-transition: all ease-in-out 0.2s;
+  -o-transition: all ease-in-out 0.2s;
+  -webkit-transition: all ease-in-out 0.2s;
+  -ms-transition: all ease-in-out 0.2s;
+}
+
+<a href="#" data-id="<?php echo get_current_user_id();?>" class="btn-primary submit-withdrawal" ><?php echo esc_html__( 'Đồng ý' , 'threeus' ); ?><i class="fa fa-cog" aria-hidden="true"></i></a>

@@ -1,0 +1,53 @@
+.table-res,
+  .table-res thead,
+  .table-res tbody,
+  .table-res th,
+  .table-res td,
+  .table-res tr {
+    display: block;
+  }
+  .table-res table > thead > tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+  .table-res table > tbody > tr {
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+  }
+  .table-res table > tbody > tr:first-child {
+    border-radius: 3px 3px 0 0;
+    border-top: none;
+  }
+  .table-res table > tbody > tr:last-child {
+    border-radius: 0 0 3px 3px;
+    border-bottom: none;
+  }
+  .table-res table > tbody > tr td {
+    border: none;
+    border-bottom: 1px solid #ccc;
+    position: relative;
+    padding-left: 30% !important;
+    width: 100%;
+    overflow: hidden;
+  }
+  .table-res table > tbody > tr td:before {
+    content: attr(data-title);
+    position: absolute;
+    top: 0px;
+    left: 14px;
+    width: 30%;
+    padding-right: 10px;
+    white-space: nowrap;
+    font-size: 14px;
+  }
+  .table-res table > tbody > tr td:first-child {
+    text-align: left;
+  }
+  .table-res.table-order table > tbody > tr:nth-child(-n + 3) > td:first-child {
+    padding: 25px 0 25px 30% !important;
+    background-position: left 32% center;
+  }
+  .table-res.table-order table > tbody > tr:nth-child(-n + 3) > td:first-child span {
+    left: 32%;
+  }

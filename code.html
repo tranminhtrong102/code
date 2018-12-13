@@ -1,4 +1,25 @@
 <script>
 	1.lấy value radio checked
 	var selValue = $('input[name=insurrance]:checked').val(); 
+
+	/*  [ Back To Top ]
+	- - - - - - - - - - - - - - - - - - - - */
+	$('.backtotop').on( 'click' , function(){ 
+		$("html, body").animate({ scrollTop: 0 }, 600); 
+		return false; 
+	});
+	/*  [ Go to Comments ]
+	- - - - - - - - - - - - - - - - - - - - */
+	$('.reply-comment').on('click' , function(e) {
+		e.preventDefault();
+		$('html, body').animate({
+			scrollTop: $(".leave-a-comment").offset().top - 120
+		}, 1000);
+	});
+	  /* [ Menu Mobile ]
+    --------------------------------------*/
+    $('.menu-mobile').on( 'click' , function(){
+      $(this).toggleClass('open');
+      $( '.main-menu' ).slideToggle();
+    });
 </script>
